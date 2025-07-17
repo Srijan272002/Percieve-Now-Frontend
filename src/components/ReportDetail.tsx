@@ -147,15 +147,15 @@ const ReportDetail: React.FC<ReportDetailProps> = ({ report, onClose }) => {
               <div className="flex flex-wrap justify-between mb-6">
                 <div className="mb-4 mr-6">
                   <p className="text-sm text-gray-500 dark:text-gray-400">Report Type</p>
-                  <p className="font-medium text-gray-800 dark:text-white">{report.reportType}</p>
+                  <p className="font-medium text-gray-900 dark:text-gray-100">{report.reportType}</p>
                 </div>
                 <div className="mb-4 mr-6">
                   <p className="text-sm text-gray-500 dark:text-gray-400">Industry</p>
-                  <p className="font-medium text-gray-800 dark:text-white">{report.industry}</p>
+                  <p className="font-medium text-gray-900 dark:text-gray-100">{report.industry}</p>
                 </div>
                 <div className="mb-4">
                   <p className="text-sm text-gray-500 dark:text-gray-400">Date</p>
-                  <p className="font-medium text-gray-800 dark:text-white">
+                  <p className="font-medium text-gray-900 dark:text-gray-100">
                     {formatDate(report.createdAt)}
                   </p>
                 </div>
@@ -166,8 +166,8 @@ const ReportDetail: React.FC<ReportDetailProps> = ({ report, onClose }) => {
               </div>
 
               <div className="prose dark:prose-invert max-w-none">
-                <h3 className="text-lg font-semibold mb-2">Summary</h3>
-                <p className="text-gray-700 dark:text-gray-300">{report.summary}</p>
+                <h3 className="text-lg font-semibold mb-2 text-gray-900 dark:text-gray-100">Summary</h3>
+                <p className="text-gray-800 dark:text-gray-200">{report.summary}</p>
               </div>
             </div>
           )}
@@ -175,8 +175,8 @@ const ReportDetail: React.FC<ReportDetailProps> = ({ report, onClose }) => {
           {/* Trust Tab */}
           {activeTab === 'trust' && (
             <div>
-              <h3 className="text-lg font-semibold mb-4">Source Reliability</h3>
-              <p className="text-gray-600 dark:text-gray-400 mb-6">
+              <h3 className="text-lg font-semibold mb-4 text-gray-900 dark:text-gray-100">Source Reliability</h3>
+              <p className="text-gray-700 dark:text-gray-300 mb-6">
                 This report is based on {report.sources.length} sources with varying levels of reliability.
               </p>
 
@@ -191,8 +191,8 @@ const ReportDetail: React.FC<ReportDetailProps> = ({ report, onClose }) => {
           {/* Feedback Tab */}
           {activeTab === 'feedback' && (
             <div>
-              <h3 className="text-lg font-semibold mb-4">Submit Feedback</h3>
-              <p className="text-gray-600 dark:text-gray-400 mb-6">
+              <h3 className="text-lg font-semibold mb-4 text-gray-900 dark:text-gray-100">Submit Feedback</h3>
+              <p className="text-gray-700 dark:text-gray-300 mb-6">
                 Help us improve our reports by providing feedback. Your input is valuable to us.
               </p>
 
